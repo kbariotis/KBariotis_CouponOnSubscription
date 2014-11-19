@@ -59,6 +59,8 @@ class KBariotis_CouponOnSubscription_Model_Observer
 
     public function sendCouponMail(Mage_SalesRule_Model_Rule $rule, $email)
     {
+        $storeName = Mage::getStoreConfig('general/store_information/name');
+
         $emailTemplate = Mage::getModel('core/email_template')
                              ->loadDefault('coupon_code_on_subscription');
 
@@ -72,7 +74,8 @@ class KBariotis_CouponOnSubscription_Model_Observer
         $emailTemplate->setSenderName(Mage::getStoreConfig('trans_email/ident_general/email'));
         $emailTemplate->setSenderEmail(Mage::getStoreConfig('trans_email/ident_general/email'));
         $emailTemplate->setType('html');
-        $emailTemplate->setTemplateSubject('Congratulations');
+        $emailTemplate->setTemplateSubject(Mage::helper('coupononsubscription')
+                                               ->__("Welcome to %s's Newsletter group", $storeName));
 
         $emailTemplate->send(
                       $email,

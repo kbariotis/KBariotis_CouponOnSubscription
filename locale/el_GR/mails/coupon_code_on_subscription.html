@@ -1,4 +1,4 @@
-<!--@subject Welcome to our Newsletter group! @--><!--@vars
+<!--@subject Καλωσήρθατε στo Newsletter Group μας! @--><!--@vars
 {"store url=\"\"":"Store Url",
 "var logo_url":"Email Logo Image Url",
 "htmlescape var=$customer.name":"Customer Name",
@@ -29,29 +29,29 @@ body,td { color:#2f2f2f; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif;
                     <tr>
                         <td valign="top">
                             <p style="font-size:12px; line-height:16px; margin:0 0 16px 0;">
-                                We welcome every new member of our Newsletter by giving you a unique discount code,
-                                {{var discount}}&euro; worth.
-                            </p>
-                            <p>
-                                Use the code <b>{{var couponCode}} on your next visit to
-                                                {{var store.getFrontendName()}}.</b>
+                                Υποδεχόμαστε κάθε νέο μέλος του Newsletter μας, χαρίζοντάς του έναν μοναδικό εκπτωτικό
+                                κωδικό αξίας {{var discount}}&euro;.
                             </p>
                             <p style="font-size:12px; line-height:16px; margin:0 0 16px 0;">
-                                Learn first all about our new offers and enjoy your shopping
-                                on {{var store.getFrontendName()}}.
+                                Επισκεφθείτε την σελίδα μας και εφαρμόστε τον αριθμό
+                                <b>{{var couponCode}} στην επόμενη αγορά σας.</b>
+                            </p>
+                            <p style="font-size:12px; line-height:16px; margin:0 0 16px 0;">
+                                Ενημερωθείτε πρώτοι για τις προσφορές μας. Η ομάδα του {{var store.getFrontendName()}}
+                                σας εύχεται καλές αγορές!
                             </p>
                             <p style="font-size:12px; line-height:16px; margin:0;">
-                                If you have any questions about your account or any other matter, please feel free to
-                                contact us at <a href="mailto:{{config path='trans_email/ident_support/email'}}"
-                                    style="color:#1E7EC8;">{{config path='trans_email/ident_support/email'}}</a> or
-                                by phone at {{config path='general/store_information/phone'}}.
+                                Εάν έχετε οποιαδήποτε ερώτηση, επικοινωνήστε μαζί μας:
+                                <a href="mailto:{{config path='trans_email/ident_support/email'}}" style="color:#1E7EC8;">
+                                {{config path='trans_email/ident_support/email'}}</a> ή
+                                στο τηλέφωνο: {{config path='general/store_information/phone'}}.
                             </p>
                         </td>
                     </tr>
                     <tr>
                         <td bgcolor="#EAEAEA" align="center" style="background:#EAEAEA; text-align:center;">
                             <center>
-                                <p style="font-size:12px; margin:0;">Thank you again,
+                                <p style="font-size:12px; margin:0;">Ευχαριστούμε και πάλι,
                                     <strong>{{var store.getFrontendName()}}</strong>
                                 </p>
                             </center>
