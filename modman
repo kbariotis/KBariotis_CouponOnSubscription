@@ -1,0 +1,3 @@
+locale/en_US/mails/coupon_code_on_subscription.html app/locale/en_US/template/email/coupon_code_on_subscription.html
+src                                                 app/code/community/KBariotis/CouponOnSubscription/
+KBariotis_CouponOnSubscription.xml                  app/etc/modules/KBariotis_CouponOnSubscription.xml

@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <KBariotis_CouponOnSubscription>
+            <version>0.1.0</version>
+        </KBariotis_CouponOnSubscription>
+    </modules>
+    <global>
+        <helpers>
+            <coupononsubscription>
+                <class>KBariotis_CouponOnSubscription_Helper</class>
+            </coupononsubscription>
+        </helpers>
+        <models>
+            <coupononsubscription>
+                <class>KBariotis_CouponOnSubscription_Model</class>
+            </coupononsubscription>
+        </models>
+        <events>
+            <newsletter_subscriber_save_commit_after>
+                <observers>
+                    <newsletter_subscriber_save_commit_after_handler>
+                        <class>coupononsubscription/observer</class>
+                        <method>subscribedToNewsletter</method>
+                    </newsletter_subscriber_save_commit_after_handler>
+                </observers>
+            </newsletter_subscriber_save_commit_after>
+            <newsletter_subscriber_save_before>
+                <observers>
+                    <newsletter_subscriber_save_before_handler>
+                        <class>coupononsubscription/observer</class>
+                        <method>newsletterSubscriberChange</method>
+                    </newsletter_subscriber_save_before_handler>
+                </observers>
+            </newsletter_subscriber_save_before>
+        </events>
+        <template>
+            <email>
+                <coupon_code_on_subscription>
+                    <label>Coupon Code on Subscription</label>
+                    <file>coupon_code_on_subscription.html</file>
+                    <type>html</type>
+                </coupon_code_on_subscription>
+            </email>
+        </template>
+    </global>
+</config> 
