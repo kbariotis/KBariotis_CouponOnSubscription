@@ -15,25 +15,12 @@
             <coupononsubscription>
                 <class>KBariotis_CouponOnSubscription_Model</class>
             </coupononsubscription>
+            <newsletter>
+                <rewrite>
+                    <subscriber>KBariotis_CouponOnSubscription_Model_Subscriber</subscriber>
+                </rewrite>
+            </newsletter>
         </models>
-        <events>
-            <newsletter_subscriber_save_commit_after>
-                <observers>
-                    <newsletter_subscriber_save_commit_after_handler>
-                        <class>coupononsubscription/observer</class>
-                        <method>subscribedToNewsletter</method>
-                    </newsletter_subscriber_save_commit_after_handler>
-                </observers>
-            </newsletter_subscriber_save_commit_after>
-            <newsletter_subscriber_save_before>
-                <observers>
-                    <newsletter_subscriber_save_before_handler>
-                        <class>coupononsubscription/observer</class>
-                        <method>newsletterSubscriberChange</method>
-                    </newsletter_subscriber_save_before_handler>
-                </observers>
-            </newsletter_subscriber_save_before>
-        </events>
         <template>
             <email>
                 <coupon_code_on_subscription>
