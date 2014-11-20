@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <config>
     <sections>
-        <coupononsubscription translate="label" module="linkwise">
+        <coupononsubscription translate="label" module="coupononsubscription">
             <label>Coupon On Subscription</label>
             <tab>sales</tab>
             <frontend_type>text</frontend_type>
