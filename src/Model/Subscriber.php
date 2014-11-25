@@ -85,7 +85,7 @@ class KBariotis_CouponOnSubscription_Model_Subscriber extends Mage_Newsletter_Mo
              ->setCouponCode($couponCode)
              ->setCustomerGroupIds($subscriberGroupIds)
              ->setIsActive(1)
-             ->setSimpleAction(Mage_SalesRule_Model_Rule::BY_FIXED_ACTION)
+             ->setSimpleAction(Mage_SalesRule_Model_Rule::CART_FIXED_ACTION)
              ->setDiscountAmount($discount)
              ->setDiscountQty(1)
              ->setStopRulesProcessing(0)
